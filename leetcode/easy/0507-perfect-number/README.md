@@ -37,9 +37,9 @@ Output: false
 ## Solution
 
 **Language:** Python  
-**Runtime:** 5 ms (beats 51.93%)  
-**Memory:** 19.3 MB (beats 48.43%)  
-**Submitted:** 2026-11-01T16:54:09.422Z  
+**Runtime:** 4 ms (beats 63.26%)  
+**Memory:** 19.1 MB (beats 82.01%)  
+**Submitted:** 2026-11-01T17:00:17.627Z  
 
 ```py
 class Solution:
@@ -49,9 +49,8 @@ class Solution:
         sum=1
         for i in range(2,int(num**0.5)+1):
             if num%i==0:
-                sum+=i
-                if i!=num//i:
-                    sum+=num//i
+                sum+=i+num//i
+                
         return num==sum
 ```
 
